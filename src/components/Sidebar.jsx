@@ -31,7 +31,7 @@ const Sidebar = () => {
             >
               {' '}
               <SiShopware />{' '}
-              <span>Shoppy</span>
+              <span>Dashboard Pro</span>
             </Link>
             <TooltipComponent content="Menu" position="BottomCenter">
               <button

@@ -4,10 +4,13 @@ import { GoPrimitiveDot } from 'react-icons/go';
 import { IoIosMore } from 'react-icons/io';
 import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 
-import { Stacked, Pie, Button, LineChart, SparkLine } from '../components';
-import { earningData, medicalproBranding, recentTransactions, weeklyStats, dropdownData, SparklineAreaData, ecomPieChartData } from '../data/dummy';
+import Stacked from './Charts/Stacked';
+import Doughnut from './Charts/Doughnut';
+import { earningData, medicalproBranding, recentTransactions, weeklyStats, dropdownData, SparklineAreaData } from '../data/dummy';
+import Button from '../components/Button';
 import { useStateContext } from '../contexts/ContextProvider';
-import product9 from '../data/product9.jpg';
+import LineChart from '../components/LineChart';
+import SparkLine from '../components/SparkLine';
 
 const DropDown = ({ currentMode }) => (
   <div className="w-28 border-1 border-color px-2 py-1 rounded-md">
@@ -115,7 +118,7 @@ const Ecommerce = () => {
               </div>
             </div>
             <div>
-              <Stacked currentMode={currentMode} width="320px" height="360px" />
+              <Stacked currentMode={currentMode} />
             </div>
           </div>
         </div>
@@ -144,8 +147,8 @@ const Ecommerce = () => {
               <p className="text-gray-400">Yearly sales</p>
             </div>
 
-            <div className="w-40">
-              <Pie id="pie-chart" data={ecomPieChartData} legendVisiblity={false} height="160px" />
+            <div>
+              <Doughnut currentMode={currentMode} />
             </div>
           </div>
         </div>
@@ -304,7 +307,7 @@ const Ecommerce = () => {
           <div className="mt-10">
             <img
               className="md:w-96 h-50 "
-              src={product9}
+              src="https://demos.wrappixel.com/premium-admin-templates/react/flexy-react/main/static/media/blog-bg-2x.f6e9447d.jpg"
               alt=""
             />
             <div className="mt-8">

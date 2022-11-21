@@ -1,12 +1,8 @@
 import React, { createContext, useContext, useState } from 'react';
 
 const StateContext = createContext();
-
 const initialState = {
-  chat: false,
-  cart: false,
-  userProfile: false,
-  notification: false,
+  chat: false, search: false, cart: false, userProfile: false, notification: false,
 };
 
 export const ContextProvider = ({ children }) => {
@@ -27,7 +23,10 @@ export const ContextProvider = ({ children }) => {
     localStorage.setItem('colorMode', color);
   };
 
-  const handleClick = (clicked) => setIsClicked({ ...initialState, [clicked]: true });
+  const handleClick = (clicked) => {
+    setIsClicked({
+      chat: false, search: false, cart: false, userProfile: false, notification: false, [clicked]: true });
+  };
 
   return (
     // eslint-disable-next-line react/jsx-no-constructed-context-values

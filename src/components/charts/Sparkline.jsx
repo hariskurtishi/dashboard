@@ -1,16 +1,16 @@
 import React from "react";
 import {
-  SparklineComponent,
+  SparkLineComponent,
   Inject,
-  SparklineTooltip,
+  SparkLineTooltip,
 } from "@syncfusion/ej2-react-charts";
 
-class Sparkline extends React.PureComponent {
+class SparkLine extends React.PureComponent {
   render() {
     const { id, height, width, color, data, type, currentColor } = this.props;
 
     return (
-      <SparklineComponent
+      <SparkLineComponent
         id={id}
         height={height}
         width={width}
@@ -32,10 +32,10 @@ class Sparkline extends React.PureComponent {
         yName="yval"
         type={type}
       >
-        <Inject services={[SparklineTooltip]} />
-      </SparklineComponent>
+        <Inject services={[SparkLineTooltip]} />
+      </SparkLineComponent>
     );
   }
 }
 
-export default Sparkline;
+export default SparkLine;

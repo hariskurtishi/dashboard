@@ -8,7 +8,7 @@ export { default as Cart } from "./Cart";
 export { default as Chat } from "./Chat";
 export { default as Notification } from "./Notification";
 export { default as UserProfile } from "./UserProfile";
-export { default as Sparkline } from "./charts/Sparkline";
+export { default as SparkLine } from "./charts/SparkLine";
 export { default as LineChart } from "./charts/LineChart";
 export { default as Stacked } from "./charts/Stacked";
 export { default as Pie } from "./charts/Pie";

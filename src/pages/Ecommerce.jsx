@@ -4,14 +4,14 @@ import { GoPrimitiveDot } from "react-icons/go";
 import { IoIosMore } from "react-icons/io";
 import { DropDownListComponent } from "@syncfusion/ej2-react-dropdowns";
 
-import { Stacked, Pie, Button, LineChart, Sparkline } from "../components";
+import { Stacked, Pie, Button, LineChart, SparkLine } from "../components";
 import {
   earningData,
   medicalproBranding,
   recentTransactions,
   weeklyStats,
   dropdownData,
-  SparklineAreaData,
+  SparkLineAreaData,
   ecomPieChartData,
 } from "../data/dummy";
 import { useStateContext } from "../contexts/ContextProvider";
@@ -122,13 +122,13 @@ const Ecommerce = () => {
               </div>
 
               <div className="mt-5">
-                <Sparkline
+                <SparkLine
                   currentColor={currentColor}
-                  id="line-Sparkline"
+                  id="line-SparkLine"
                   type="Line"
                   height="80px"
                   width="250px"
-                  data={SparklineAreaData}
+                  data={SparkLineAreaData}
                   color={currentColor}
                 />
               </div>
@@ -163,12 +163,12 @@ const Ecommerce = () => {
             </div>
 
             <div className="mt-4">
-              <Sparkline
+              <SparkLine
                 currentColor={currentColor}
-                id="column-Sparkline"
+                id="column-SparkLine"
                 height="100px"
                 type="Column"
-                data={SparklineAreaData}
+                data={SparkLineAreaData}
                 width="320"
                 color="rgb(242, 252, 253)"
               />
@@ -282,12 +282,12 @@ const Ecommerce = () => {
               </div>
             ))}
             <div className="mt-4">
-              <Sparkline
+              <SparkLine
                 currentColor={currentColor}
-                id="area-Sparkline"
+                id="area-SparkLine"
                 height="160px"
                 type="Area"
-                data={SparklineAreaData}
+                data={SparkLineAreaData}
                 width="320"
                 color="rgb(242, 252, 253)"
               />
